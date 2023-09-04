@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct XplungerApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+        MenuBarExtra("Xplunger", systemImage: "shower.fill") {
+            AppMenu()
+        }.menuBarExtraStyle(.window)
     }
 }
