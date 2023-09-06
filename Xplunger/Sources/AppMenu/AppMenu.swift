@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AppMenu: View {
     @StateObject private var coordinator = AppCoordinator()
+    @State private var isExpanded = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,6 +19,7 @@ struct AppMenu: View {
             }
             
             Divider()
+                .padding(.horizontal, 8)
             
             MenuRow {
                 HStack {
@@ -39,6 +41,24 @@ struct AppMenu: View {
             .hoverEffect()
             
             Divider()
+                .padding(.horizontal, 8)
+            
+            ExpandableView(isExpanded: $isExpanded, collapsed: {
+                Text("Services to kill:")
+                    .fontWeight(.medium)
+            }, expanded: {
+                VStack(alignment: .leading) {
+                    Text("XCBBuildService")
+                    Text("SourceKitService")
+                    Text("lldb-rpc-server")
+                    Text("com.apple.dt.SKAgent")
+                    Text("swift-frontend")
+                }
+            })
+            .padding(.horizontal, 8)
+            
+            Divider()
+                .padding(.horizontal, 8)
             
             MenuRow {
                 Button(action: coordinator.quit) {
@@ -53,6 +73,6 @@ struct AppMenu: View {
             .hoverEffect()
         }
         .padding(EdgeInsets(top: 10, leading: 4, bottom: 10, trailing: 4))
-        .frame(width: 300)
+        .frame(minWidth: 300)
     }
 }

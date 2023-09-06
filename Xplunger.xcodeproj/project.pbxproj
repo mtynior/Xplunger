@@ -21,6 +21,7 @@
 		90F316ED2AA78BBC00930B81 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F316EC2AA78BBC00930B81 /* View+Extensions.swift */; };
 		90F316EF2AA78E9A00930B81 /* View+Hover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F316EE2AA78E9A00930B81 /* View+Hover.swift */; };
 		90F316F12AA7B72B00930B81 /* View+ShortcutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F316F02AA7B72B00930B81 /* View+ShortcutLabel.swift */; };
+		90F316F32AA7C38100930B81 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F316F22AA7C38100930B81 /* ExpandableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		90F316EC2AA78BBC00930B81 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		90F316EE2AA78E9A00930B81 /* View+Hover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Hover.swift"; sourceTree = "<group>"; };
 		90F316F02AA7B72B00930B81 /* View+ShortcutLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ShortcutLabel.swift"; sourceTree = "<group>"; };
+		90F316F22AA7C38100930B81 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				90F316E92AA78B6B00930B81 /* MenuRow.swift */,
+				90F316F22AA7C38100930B81 /* ExpandableView.swift */,
 				90F316EC2AA78BBC00930B81 /* View+Extensions.swift */,
 				90F316EE2AA78E9A00930B81 /* View+Hover.swift */,
 				90F316F02AA7B72B00930B81 /* View+ShortcutLabel.swift */,
@@ -338,6 +341,7 @@
 			files = (
 				90F316F12AA7B72B00930B81 /* View+ShortcutLabel.swift in Sources */,
 				90B5F0F42AA63F280024D61B /* ProcessKiller.swift in Sources */,
+				90F316F32AA7C38100930B81 /* ExpandableView.swift in Sources */,
 				90B5F0C32AA632240024D61B /* AppMenu.swift in Sources */,
 				90B5F0F62AA640020024D61B /* Shell.swift in Sources */,
 				90F316ED2AA78BBC00930B81 /* View+Extensions.swift in Sources */,

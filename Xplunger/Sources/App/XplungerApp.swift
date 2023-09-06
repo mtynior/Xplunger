@@ -12,6 +12,8 @@ struct XplungerApp: App {
     var body: some Scene {
         MenuBarExtra("Xplunger", systemImage: "shower.fill") {
             AppMenu()
-        }.menuBarExtraStyle(.window)
+        }
+        .menuBarExtraStyle(.window)
+        
     }
 }
