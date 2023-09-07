@@ -19,12 +19,12 @@ struct AppMenu: View {
             }
             
             Divider()
-                .padding(.horizontal, 8)
+                .padding(.horizontal, Spacing.medium)
             
             MenuRow {
                 HStack {
                     Button(action: coordinator.killXcodeBuildProcesses) {
-                        HStack(spacing: 8) {
+                        HStack(spacing: Spacing.medium) {
                             Text("Kill Xcode Build Processes")
                             ProgressView()
                                 .controlSize(.small)
@@ -41,7 +41,7 @@ struct AppMenu: View {
             .hoverEffect()
             
             Divider()
-                .padding(.horizontal, 8)
+                .padding(.horizontal, Spacing.medium)
             
             ExpandableView(isExpanded: $isExpanded, collapsed: {
                 Text("Services to kill:")
@@ -55,15 +55,15 @@ struct AppMenu: View {
                     Text("swift-frontend")
                 }
             })
-            .padding(.horizontal, 8)
+            .padding(.horizontal, Spacing.medium)
             
             Divider()
-                .padding(.horizontal, 8)
+                .padding(.horizontal, Spacing.medium)
             
             MenuRow {
                 Button(action: coordinator.quit) {
                     Text("Quit")
-                        .frame(minWidth: 0,  maxWidth: .infinity, alignment: .leading)
+                        .fillParent(axis: .horizontal, alignment: .leading)
                         .shortcutLabel("⌘Q")
                 }
                 .buttonStyle(.plain)
@@ -72,7 +72,7 @@ struct AppMenu: View {
             }
             .hoverEffect()
         }
-        .padding(EdgeInsets(top: 10, leading: 4, bottom: 10, trailing: 4))
+        .padding(EdgeInsets(horizontal: Spacing.extraSmall, vertical: Spacing.standard))
         .frame(minWidth: 300)
     }
 }

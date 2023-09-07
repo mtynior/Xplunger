@@ -19,7 +19,7 @@ struct ExpandableView<Collapsed: View, Expanded: View>: View {
     init(
         isExpanded: Binding<Bool>,
         alignment: HorizontalAlignment = .leading,
-        padding: EdgeInsets = EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8),
+        padding: EdgeInsets = EdgeInsets(horizontal: Spacing.medium, vertical: Spacing.zero),
         @ViewBuilder collapsed: @escaping () -> Collapsed,
         @ViewBuilder expanded: @escaping () -> Expanded
     ) {
@@ -32,7 +32,7 @@ struct ExpandableView<Collapsed: View, Expanded: View>: View {
     
     var body: some View {
         VStack(alignment: alignment) {
-            MenuRow(padding: .init(top: 0, leading: 0, bottom: 0, trailing: 0)) {
+            MenuRow(padding: .init(Spacing.zero)) {
                 HStack {
                     collapsed()
                     

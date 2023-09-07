@@ -12,7 +12,11 @@ struct MenuRow<Content: View>: View {
     private let padding: EdgeInsets
     private let content: () -> Content
     
-    init(alignment: HorizontalAlignment = .leading, padding: EdgeInsets = EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8), @ViewBuilder content: @escaping () -> Content) {
+    init(
+        alignment: HorizontalAlignment = .leading,
+        padding: EdgeInsets = EdgeInsets(horizontal: Spacing.medium, vertical: Spacing.zero),
+        @ViewBuilder content: @escaping () -> Content
+    ) {
         self.alignment = alignment
         self.padding = padding
         self.content = content
@@ -23,6 +27,6 @@ struct MenuRow<Content: View>: View {
             content()
                 .padding(padding)
         }
-        .frame(minWidth: 0, idealWidth: .infinity, maxWidth: .infinity, minHeight: 24, alignment: .leading)
+        .frame(minWidth: Spacing.zero, idealWidth: .infinity, maxWidth: .infinity, minHeight: Spacing.extraLarge2, alignment: .leading)
     }
 }
