@@ -7,12 +7,13 @@
 
 import Foundation
 import AppKit
+import OSLog
 
 final class AppCoordinator: ObservableObject {
     private let processToKill = ["XCBBuildService", "SourceKitService", "lldb-rpc-server", "com.apple.dt.SKAgent", "swift-frontend"]
-    private let processKiller = ProcessKiller()
+    private let shell = Shell()
+    private let logger = Logger(subsystem: "Xplunger", category: "")
 
-    @Published var progress: Float = 0.0
     @Published var isWorking: Bool = false
     
     func killXcodeBuildProcesses() {
@@ -23,11 +24,10 @@ final class AppCoordinator: ObservableObject {
             
             do {
                 for processName in processToKill {
-                    //try await processKiller.killProcess(byName: processName)
-                    Thread.sleep(forTimeInterval: 2)
+                    try await shell.executeCommand("killall -9 \(processName)")
                 }
             } catch {
-                print("[Error] \(error)")
+                logger.error("\(error)")
             }
             
             DispatchQueue.main.async {

@@ -15,7 +15,6 @@
 		90B5F0DD2AA632250024D61B /* XplungerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5F0DC2AA632250024D61B /* XplungerUITests.swift */; };
 		90B5F0DF2AA632250024D61B /* XplungerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5F0DE2AA632250024D61B /* XplungerUITestsLaunchTests.swift */; };
 		90B5F0F12AA63CB70024D61B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5F0F02AA63CB70024D61B /* AppCoordinator.swift */; };
-		90B5F0F42AA63F280024D61B /* ProcessKiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5F0F32AA63F280024D61B /* ProcessKiller.swift */; };
 		90B5F0F62AA640020024D61B /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5F0F52AA640020024D61B /* Shell.swift */; };
 		90E004D02AAA321900631408 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E004CF2AAA321900631408 /* Spacing.swift */; };
 		90E004D22AAA333300631408 /* EdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E004D12AAA333300631408 /* EdgeInsets+Helpers.swift */; };
@@ -56,7 +55,6 @@
 		90B5F0DC2AA632250024D61B /* XplungerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XplungerUITests.swift; sourceTree = "<group>"; };
 		90B5F0DE2AA632250024D61B /* XplungerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XplungerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		90B5F0F02AA63CB70024D61B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		90B5F0F32AA63F280024D61B /* ProcessKiller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessKiller.swift; sourceTree = "<group>"; };
 		90B5F0F52AA640020024D61B /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		90E004CF2AAA321900631408 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		90E004D12AAA333300631408 /* EdgeInsets+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 		90B5F0F22AA63F130024D61B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				90B5F0F32AA63F280024D61B /* ProcessKiller.swift */,
 				90B5F0F52AA640020024D61B /* Shell.swift */,
 			);
 			path = Core;
@@ -370,7 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F316F12AA7B72B00930B81 /* View+ShortcutLabel.swift in Sources */,
-				90B5F0F42AA63F280024D61B /* ProcessKiller.swift in Sources */,
 				90F316F32AA7C38100930B81 /* ExpandableView.swift in Sources */,
 				90B5F0C32AA632240024D61B /* AppMenu.swift in Sources */,
 				90B5F0F62AA640020024D61B /* Shell.swift in Sources */,
