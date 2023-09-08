@@ -21,6 +21,10 @@ struct AppMenu: View {
             
             divider()
             
+            launchAtLoginRow()
+            
+            divider()
+            
             quitRow()
         }
         .padding(EdgeInsets(horizontal: Spacing.extraSmall, vertical: Spacing.standard))
@@ -56,6 +60,24 @@ private extension AppMenu {
         .hoverEffect()
     }
     
+    @ViewBuilder func launchAtLoginRow() -> some View {
+        MenuRow {
+            Button(action: {
+                coordinator.launchAtLoginDidChange(to: !coordinator.launchAtLogin)
+            }, label: {
+                if coordinator.launchAtLogin {
+                    Image(systemName: "checkmark")
+                        .font(.footnote)
+                }
+                
+                Text("Launch at login")
+                    .fillParent(axis: .horizontal, alignment: .leading)
+            })
+            .buttonStyle(.plain)
+        }
+        .hoverEffect()
+    }
+    
     @ViewBuilder func quitRow() -> some View {
         MenuRow {
             Button(action: coordinator.quit) {
@@ -65,7 +87,6 @@ private extension AppMenu {
             }
             .buttonStyle(.plain)
             .keyboardShortcut("q")
-            .fillParent(axis: .horizontal)
         }
         .hoverEffect()
     }
