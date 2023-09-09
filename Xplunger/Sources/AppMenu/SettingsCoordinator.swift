@@ -11,7 +11,7 @@ import ServiceManagement
 import OSLog
 
 final class SettingsCoordinator: ObservableObject {
-    private let logger = Logger(subsystem: "Xplunger", category: "Settings")
+    private let logger = Logger(subsystem: "Xplunger", category: "SettingsCoordinator")
 
     @Published var launchAtLogin: Bool {
         didSet {

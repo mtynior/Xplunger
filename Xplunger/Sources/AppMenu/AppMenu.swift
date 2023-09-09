@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct AppMenu: View {
-    @StateObject private var coordinator = AppCoordinator()
+    private enum Constants {
+        static let menuMinWidth: CGFloat = 300
+    }
+    
+    @StateObject private var xcbuildCoordinator = XCBuildCoordinator()
     @StateObject private var settingsCoordinator = SettingsCoordinator()
+    @StateObject private var appCoordinator = AppCoordinator()
     
     @State private var isExpanded = false
     
@@ -30,7 +35,7 @@ struct AppMenu: View {
             quitRow()
         }
         .padding(EdgeInsets(horizontal: Spacing.extraSmall, vertical: Spacing.standard))
-        .frame(minWidth: 300)
+        .frame(minWidth: Constants.menuMinWidth)
     }
 }
 
@@ -45,18 +50,18 @@ private extension AppMenu {
     
     @ViewBuilder func killProcessesRow() -> some View {
         MenuRow {
-            Button(action: coordinator.killXcodeBuildProcesses) {
+            Button(action: xcbuildCoordinator.killXcodeBuildProcesses) {
                 HStack(spacing: Spacing.medium) {
                     Text("Kill Xcode Build Processes")
                     
                     ProgressView()
                         .controlSize(.small)
-                        .opacity(coordinator.isWorking ? 1 : 0)
+                        .opacity(xcbuildCoordinator.isWorking ? 1 : 0)
                 }
                 .shortcutLabel("⌘K")
             }
             .buttonStyle(.plain)
-            .disabled(coordinator.isWorking)
+            .disabled(xcbuildCoordinator.isWorking)
             .keyboardShortcut("k")
         }
         .hoverEffect()
@@ -82,7 +87,7 @@ private extension AppMenu {
     
     @ViewBuilder func quitRow() -> some View {
         MenuRow {
-            Button(action: coordinator.quit) {
+            Button(action: appCoordinator.quit) {
                 Text("Quit")
                     .fillParent(axis: .horizontal, alignment: .leading)
                     .shortcutLabel("⌘Q")
@@ -96,21 +101,5 @@ private extension AppMenu {
     @ViewBuilder func divider() -> some View {
         Divider()
             .padding(.horizontal, Spacing.medium)
-    }
-    
-    @ViewBuilder func selectedServicesRow() -> some View {
-        ExpandableView(isExpanded: $isExpanded, collapsed: {
-            Text("Services to kill:")
-                .fontWeight(.medium)
-        }, expanded: {
-            VStack(alignment: .leading) {
-                Text("XCBBuildService")
-                Text("SourceKitService")
-                Text("lldb-rpc-server")
-                Text("com.apple.dt.SKAgent")
-                Text("swift-frontend")
-            }
-        })
-        .padding(.horizontal, Spacing.medium)
     }
 }
