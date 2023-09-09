@@ -16,10 +16,8 @@ struct AppMenu: View {
     @StateObject private var settingsCoordinator = SettingsCoordinator()
     @StateObject private var appCoordinator = AppCoordinator()
     
-    @State private var isExpanded = false
-    
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: Spacing.extraSmall) {
             headerRow()
             
             divider()
@@ -28,9 +26,11 @@ struct AppMenu: View {
             
             divider()
             
-            showDockIconRow()
-            
-            launchAtLoginRow()
+            VStack(spacing: Spacing.zero) {
+                launchAtLoginRow()
+                
+                showDockIconRow()
+            }
             
             divider()
             
@@ -71,36 +71,18 @@ private extension AppMenu {
     
     @ViewBuilder func launchAtLoginRow() -> some View {
         MenuRow {
-            Button(action: {
-                settingsCoordinator.launchAtLogin.toggle()
-            }, label: {
-                if settingsCoordinator.launchAtLogin {
-                    Image(systemName: "checkmark")
-                        .font(.footnote)
-                }
-                
+            Checkbox(isSelected: $settingsCoordinator.launchAtLogin) {
                 Text("Launch at login")
-                    .fillParent(axis: .horizontal, alignment: .leading)
-            })
-            .buttonStyle(.plain)
+            }
         }
         .hoverEffect()
     }
     
     @ViewBuilder func showDockIconRow() -> some View {
         MenuRow {
-            Button(action: {
-                settingsCoordinator.showDockIcon.toggle()
-            }, label: {
-                if settingsCoordinator.showDockIcon {
-                    Image(systemName: "checkmark")
-                        .font(.footnote)
-                }
-                
+            Checkbox(isSelected: $settingsCoordinator.showDockIcon) {
                 Text("Show Dock icon")
-                    .fillParent(axis: .horizontal, alignment: .leading)
-            })
-            .buttonStyle(.plain)
+            }
         }
         .hoverEffect()
     }

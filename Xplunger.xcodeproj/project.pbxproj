@@ -20,6 +20,7 @@
 		90E004D22AAA333300631408 /* EdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E004D12AAA333300631408 /* EdgeInsets+Helpers.swift */; };
 		90E004D52AAC842500631408 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E004D42AAC842500631408 /* SettingsCoordinator.swift */; };
 		90E004D72AAC85A700631408 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E004D62AAC85A700631408 /* AppCoordinator.swift */; };
+		90E004D92AAC913800631408 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E004D82AAC913800631408 /* Checkbox.swift */; };
 		90F316EA2AA78B6C00930B81 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F316E92AA78B6B00930B81 /* MenuRow.swift */; };
 		90F316ED2AA78BBC00930B81 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F316EC2AA78BBC00930B81 /* View+Extensions.swift */; };
 		90F316EF2AA78E9A00930B81 /* View+Hover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F316EE2AA78E9A00930B81 /* View+Hover.swift */; };
@@ -63,6 +64,7 @@
 		90E004D32AAA422B00631408 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		90E004D42AAC842500631408 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		90E004D62AAC85A700631408 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		90E004D82AAC913800631408 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		90F316E92AA78B6B00930B81 /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		90F316EC2AA78BBC00930B81 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		90F316EE2AA78E9A00930B81 /* View+Hover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Hover.swift"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				90F316E92AA78B6B00930B81 /* MenuRow.swift */,
 				90F316F22AA7C38100930B81 /* ExpandableView.swift */,
+				90E004D82AAC913800631408 /* Checkbox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				90E004D52AAC842500631408 /* SettingsCoordinator.swift in Sources */,
 				90E004D72AAC85A700631408 /* AppCoordinator.swift in Sources */,
 				90F316F32AA7C38100930B81 /* ExpandableView.swift in Sources */,
+				90E004D92AAC913800631408 /* Checkbox.swift in Sources */,
 				90B5F0C32AA632240024D61B /* AppMenu.swift in Sources */,
 				90B5F0F62AA640020024D61B /* Shell.swift in Sources */,
 				90F316ED2AA78BBC00930B81 /* View+Extensions.swift in Sources */,
