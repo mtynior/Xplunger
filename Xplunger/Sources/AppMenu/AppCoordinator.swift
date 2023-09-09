@@ -7,7 +7,6 @@
 
 import Foundation
 import AppKit
-import ServiceManagement
 import OSLog
 
 final class AppCoordinator: ObservableObject {
@@ -16,11 +15,9 @@ final class AppCoordinator: ObservableObject {
     private let logger = Logger(subsystem: "Xplunger", category: "")
 
     @Published var isWorking: Bool
-    @Published var launchAtLogin: Bool
     
     init() {
         self.isWorking = false
-        self.launchAtLogin = SMAppService.mainApp.status == .enabled
     }
     
     func killXcodeBuildProcesses() {
@@ -45,23 +42,5 @@ final class AppCoordinator: ObservableObject {
     
     func quit() {
         NSApplication.shared.terminate(nil)
-    }
-    
-    func launchAtLoginDidChange(to newValue: Bool) {
-        do {
-            if newValue {
-                if SMAppService.mainApp.status == .enabled {
-                    try? SMAppService.mainApp.unregister()
-                }
-                
-                try SMAppService.mainApp.register()
-            } else {
-                try SMAppService.mainApp.unregister()
-            }
-            
-            launchAtLogin = newValue
-        } catch {
-            logger.error("Failed to \(newValue ? "enable" : "disable") launch at login: \(error.localizedDescription)")
-        }
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AppMenu: View {
     @StateObject private var coordinator = AppCoordinator()
+    @StateObject private var settingsCoordinator = SettingsCoordinator()
+    
     @State private var isExpanded = false
     
     var body: some View {
@@ -63,9 +65,9 @@ private extension AppMenu {
     @ViewBuilder func launchAtLoginRow() -> some View {
         MenuRow {
             Button(action: {
-                coordinator.launchAtLoginDidChange(to: !coordinator.launchAtLogin)
+                settingsCoordinator.launchAtLogin.toggle()
             }, label: {
-                if coordinator.launchAtLogin {
+                if settingsCoordinator.launchAtLogin {
                     Image(systemName: "checkmark")
                         .font(.footnote)
                 }
