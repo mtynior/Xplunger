@@ -45,7 +45,7 @@ struct AppMenu: View {
 private extension AppMenu {
     @ViewBuilder func headerRow() -> some View {
         MenuRow {
-            Text("Xplunger")
+            Text("common.xplunger")
                 .fontWeight(.bold)
         }
     }
@@ -54,7 +54,7 @@ private extension AppMenu {
         MenuRow {
             Button(action: xcbuildCoordinator.killXcodeBuildProcesses) {
                 HStack(spacing: Spacing.medium) {
-                    Text("Kill Xcode Build Processes")
+                    Text("xcbuild.kill_processes")
                     
                     ProgressView()
                         .controlSize(.small)
@@ -72,7 +72,7 @@ private extension AppMenu {
     @ViewBuilder func launchAtLoginRow() -> some View {
         MenuRow {
             Checkbox(isSelected: $settingsCoordinator.launchAtLogin) {
-                Text("Launch at login")
+                Text("settings.launch_at_login")
             }
         }
         .hoverEffect()
@@ -81,7 +81,7 @@ private extension AppMenu {
     @ViewBuilder func showDockIconRow() -> some View {
         MenuRow {
             Checkbox(isSelected: $settingsCoordinator.showDockIcon) {
-                Text("Show Dock icon")
+                Text("settings.show_dock_icon")
             }
         }
         .hoverEffect()
@@ -90,7 +90,7 @@ private extension AppMenu {
     @ViewBuilder func quitRow() -> some View {
         MenuRow {
             Button(action: appCoordinator.quit) {
-                Text("Quit")
+                Text("common.quit")
                     .fillParent(axis: .horizontal, alignment: .leading)
                     .shortcutLabel("⌘Q")
             }
