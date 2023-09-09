@@ -11,6 +11,7 @@ import ServiceManagement
 import OSLog
 
 final class SettingsCoordinator: ObservableObject {
+    private let userSettings = UserSettings()
     private let logger = Logger(subsystem: "Xplunger", category: "SettingsCoordinator")
     
     @Published var showDockIcon: Bool {
@@ -26,7 +27,7 @@ final class SettingsCoordinator: ObservableObject {
     }
     
     init() {
-        self.showDockIcon = NSApplication.shared.activationPolicy() == .regular
+        self.showDockIcon = userSettings.showDockIcon
         self.launchAtLogin = SMAppService.mainApp.status == .enabled
     }
 }
@@ -51,6 +52,7 @@ private extension SettingsCoordinator {
     func showDockIconDidChange(to isVisible: Bool) {
         let policy: NSApplication.ActivationPolicy = isVisible ? .regular : .accessory
         NSApplication.shared.setActivationPolicy(policy)
+        userSettings.showDockIcon = isVisible
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             NSApplication.shared.windows.last?.orderFrontRegardless()

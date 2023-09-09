@@ -11,4 +11,10 @@ final class AppCoordinator: ObservableObject {
     func quit() {
         NSApplication.shared.terminate(nil)
     }
+    
+    func showDockIconIfNecessary() {
+        if UserSettings.current.showDockIcon {
+            NSApplication.shared.setActivationPolicy(.regular)
+        }
+    }
 }

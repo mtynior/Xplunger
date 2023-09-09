@@ -14,7 +14,7 @@ struct AppMenu: View {
     
     @StateObject private var xcbuildCoordinator = XCBuildCoordinator()
     @StateObject private var settingsCoordinator = SettingsCoordinator()
-    @StateObject private var appCoordinator = AppCoordinator()
+    @EnvironmentObject private var appCoordinator: AppCoordinator
     
     var body: some View {
         VStack(alignment: .leading, spacing: Spacing.extraSmall) {
