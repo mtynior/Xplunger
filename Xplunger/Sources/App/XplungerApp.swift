@@ -13,10 +13,7 @@ struct XplungerApp: App {
         MenuBarExtra {
             AppMenu()
         } label: {
-            let configuration = NSImage.SymbolConfiguration(pointSize: 16, weight: .black)
-            let image = NSImage(named: "plunger")
-            let updateImage = image?.withSymbolConfiguration(configuration)
-            Image(nsImage: updateImage!)
+            AppMenuIcon()
         }
         .menuBarExtraStyle(.window)
     }
