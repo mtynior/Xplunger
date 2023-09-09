@@ -28,6 +28,8 @@ struct AppMenu: View {
             
             divider()
             
+            showDockIconRow()
+            
             launchAtLoginRow()
             
             divider()
@@ -78,6 +80,24 @@ private extension AppMenu {
                 }
                 
                 Text("Launch at login")
+                    .fillParent(axis: .horizontal, alignment: .leading)
+            })
+            .buttonStyle(.plain)
+        }
+        .hoverEffect()
+    }
+    
+    @ViewBuilder func showDockIconRow() -> some View {
+        MenuRow {
+            Button(action: {
+                settingsCoordinator.showDockIcon.toggle()
+            }, label: {
+                if settingsCoordinator.showDockIcon {
+                    Image(systemName: "checkmark")
+                        .font(.footnote)
+                }
+                
+                Text("Show Dock icon")
                     .fillParent(axis: .horizontal, alignment: .leading)
             })
             .buttonStyle(.plain)
