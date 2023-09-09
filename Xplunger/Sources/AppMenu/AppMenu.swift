@@ -61,6 +61,7 @@ private extension AppMenu {
                         .opacity(xcbuildCoordinator.isWorking ? 1 : 0)
                 }
                 .shortcutLabel("⌘K")
+                .emptySpaceIsTappable()
             }
             .buttonStyle(.plain)
             .disabled(xcbuildCoordinator.isWorking)
@@ -93,6 +94,7 @@ private extension AppMenu {
                 Text("common.quit")
                     .fillParent(axis: .horizontal, alignment: .leading)
                     .shortcutLabel("⌘Q")
+                    .emptySpaceIsTappable()
             }
             .buttonStyle(.plain)
             .keyboardShortcut("q")

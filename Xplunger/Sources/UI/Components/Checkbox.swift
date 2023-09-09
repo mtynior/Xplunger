@@ -34,7 +34,7 @@ struct Checkbox<Content: View>: View {
                 .padding(padding)
         }
         .fillParent(axis: .horizontal, alignment: .leading)
-        .background(Color.white.opacity(0.01))
+        .emptySpaceIsTappable()
         .onTapGesture {
             isSelected.toggle()
         }
