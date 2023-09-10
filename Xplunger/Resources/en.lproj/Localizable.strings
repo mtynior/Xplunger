@@ -11,7 +11,7 @@
 "common.quit" = "Quit";
 
 // XCBuild
-"xcbuild.kill_processes" = "Kill Xcode Build Processes";
+"xcbuild.kill_processes" = "Unclog Xcode";
 
 // Settings
 "settings.show_dock_icon" = "Show Dock icon";
