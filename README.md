@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="256" src="https://github.com/mtynior/Xplunger/assets/6362174/f676e5ea-abd1-4ec7-ad0b-35fb3a5f5283">
+    <img width="256" src="https://github.com/mtynior/Xplunger/assets/6362174/ad2d0289-2959-4d20-ab09-b8c51002506d">
     <h1>Xplunger</h1>
     <h3>An utility app that unclogs Xcode's build processes.</h3>
 </div>
