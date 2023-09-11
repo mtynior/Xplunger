@@ -14,6 +14,7 @@ extension View {
 }
 
 struct ShortcutLabel: ViewModifier {
+    @Environment(\.colorScheme) private var colorScheme
     private let label: LocalizedStringKey
     
     init(label: LocalizedStringKey) {
@@ -27,7 +28,7 @@ struct ShortcutLabel: ViewModifier {
             Spacer()
             
             Text(label)
-                .foregroundStyle(Color.black.opacity(0.5))
+                .foregroundStyle(colorScheme == .dark ? Color.lightGray : Color.darkGray)
         }
     }
 }
