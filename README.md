@@ -8,6 +8,10 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
 </p>
 
+<div align="center">
+    <img width="578" alt="xplunger_screenshot" src="https://github.com/mtynior/Xplunger/assets/6362174/b42df63c-1a13-437e-84c6-6023400201a9">
+</div>
+
 This is a simple utility app that kills Xcode's build processes that are stuck. The app kills following processes:
 
 * XCBBuildService
