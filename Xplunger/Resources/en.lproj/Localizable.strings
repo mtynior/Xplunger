@@ -8,6 +8,7 @@
 
 // Common
 "common.xplunger" = "Xplunger";
+"common.about" = "About";
 "common.quit" = "Quit";
 
 // XCBuild

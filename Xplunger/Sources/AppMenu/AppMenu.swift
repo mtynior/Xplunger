@@ -34,6 +34,10 @@ struct AppMenu: View {
             
             divider()
             
+            aboutRow()
+            
+            divider()
+            
             quitRow()
         }
         .padding(EdgeInsets(horizontal: Spacing.extraSmall, vertical: Spacing.standard))
@@ -84,6 +88,19 @@ private extension AppMenu {
             Checkbox(isSelected: $settingsCoordinator.showDockIcon) {
                 Text("settings.show_dock_icon")
             }
+        }
+        .hoverEffect()
+    }
+    
+    @ViewBuilder func aboutRow() -> some View {
+        MenuRow {
+            Button(action: appCoordinator.quit) {
+                Text("common.about")
+                    .fillParent(axis: .horizontal, alignment: .leading)
+                    .emptySpaceIsTappable()
+            }
+            .buttonStyle(.plain)
+            .keyboardShortcut("q")
         }
         .hoverEffect()
     }
