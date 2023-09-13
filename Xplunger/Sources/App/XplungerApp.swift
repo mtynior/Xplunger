@@ -20,5 +20,9 @@ struct XplungerApp: App {
                 .onAppear(perform: appCoordinator.showDockIconIfNecessary)
         }
         .menuBarExtraStyle(.window)
+        
+        Settings {
+            AboutScreen()
+        }
     }
 }

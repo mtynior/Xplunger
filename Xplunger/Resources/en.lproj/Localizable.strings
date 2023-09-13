@@ -17,3 +17,6 @@
 // Settings
 "settings.show_dock_icon" = "Show Dock icon";
 "settings.launch_at_login" = "Launch at login";
+
+// About
+"about.description" = "Created by Michal Tynior out of necessity.";

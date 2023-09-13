@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90A55F222AB20B0E00890B7D /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A55F212AB20B0E00890B7D /* AboutScreen.swift */; };
+		90A55F242AB2178000890B7D /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A55F232AB2178000890B7D /* AppEnvironment.swift */; };
 		90B5F0C12AA632240024D61B /* XplungerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5F0C02AA632240024D61B /* XplungerApp.swift */; };
 		90B5F0C32AA632240024D61B /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5F0C22AA632240024D61B /* AppMenu.swift */; };
 		90B5F0C52AA632250024D61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B5F0C42AA632250024D61B /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90A55F212AB20B0E00890B7D /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		90A55F232AB2178000890B7D /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		90B5F0BD2AA632240024D61B /* Xplunger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xplunger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B5F0C02AA632240024D61B /* XplungerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XplungerApp.swift; sourceTree = "<group>"; };
 		90B5F0C22AA632240024D61B /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90A55F202AB20AF700890B7D /* AboutScreen */ = {
+			isa = PBXGroup;
+			children = (
+				90A55F212AB20B0E00890B7D /* AboutScreen.swift */,
+			);
+			path = AboutScreen;
+			sourceTree = "<group>";
+		};
 		90B5F0B42AA632240024D61B = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +178,7 @@
 			children = (
 				90B5F0EE2AA639280024D61B /* App */,
 				90F316E52AA78B3700930B81 /* AppMenu */,
+				90A55F202AB20AF700890B7D /* AboutScreen */,
 				90B5F0F22AA63F130024D61B /* Core */,
 				90F316EB2AA78BA000930B81 /* UI */,
 			);
@@ -205,6 +218,7 @@
 			children = (
 				90B5F0F52AA640020024D61B /* Shell.swift */,
 				90E004E12AAC970900631408 /* UserSettings.swift */,
+				90A55F232AB2178000890B7D /* AppEnvironment.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -394,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F316F12AA7B72B00930B81 /* View+ShortcutLabel.swift in Sources */,
+				90A55F222AB20B0E00890B7D /* AboutScreen.swift in Sources */,
 				90E004D52AAC842500631408 /* SettingsCoordinator.swift in Sources */,
 				90E004D72AAC85A700631408 /* AppCoordinator.swift in Sources */,
 				90E004E42AAC9A7D00631408 /* Colors.swift in Sources */,
@@ -401,6 +416,7 @@
 				90E004D92AAC913800631408 /* Checkbox.swift in Sources */,
 				90B5F0C32AA632240024D61B /* AppMenu.swift in Sources */,
 				90B5F0F62AA640020024D61B /* Shell.swift in Sources */,
+				90A55F242AB2178000890B7D /* AppEnvironment.swift in Sources */,
 				90F316ED2AA78BBC00930B81 /* View+Extensions.swift in Sources */,
 				90B5F0F12AA63CB70024D61B /* XCBuildCoordinator.swift in Sources */,
 				90F316EF2AA78E9A00930B81 /* View+Hover.swift in Sources */,

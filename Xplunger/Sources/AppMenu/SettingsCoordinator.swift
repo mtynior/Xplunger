@@ -30,6 +30,11 @@ final class SettingsCoordinator: ObservableObject {
         self.showDockIcon = userSettings.showDockIcon
         self.launchAtLogin = SMAppService.mainApp.status == .enabled
     }
+    
+    func openAboutWindow() {
+        NSApp.activate(ignoringOtherApps: true)
+        NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+    }
 }
 
 private extension SettingsCoordinator {

@@ -94,7 +94,7 @@ private extension AppMenu {
     
     @ViewBuilder func aboutRow() -> some View {
         MenuRow {
-            Button(action: appCoordinator.quit) {
+            Button(action: settingsCoordinator.openAboutWindow) {
                 Text("common.about")
                     .fillParent(axis: .horizontal, alignment: .leading)
                     .emptySpaceIsTappable()
