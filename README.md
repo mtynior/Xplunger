@@ -19,3 +19,7 @@ This is a simple utility app that kills Xcode's build processes that are stuck. 
 * lldb-rpc-server
 * com.apple.dt.SKAgent
 * swift-frontend
+
+## Requirements
+* Xcode 14+
+* macOS 13+
